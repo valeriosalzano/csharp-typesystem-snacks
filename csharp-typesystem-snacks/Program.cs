@@ -180,8 +180,11 @@ namespace csharp_typesystem_snacks
                             if (userNumber % 2 != 0)
                             {
                                 numbersArray[i] = userNumber;
+                                Console.WriteLine("Inserito.");
                             }
                         }
+
+
                         Console.WriteLine("");
                         break;
                     case "8":
@@ -208,6 +211,9 @@ namespace csharp_typesystem_snacks
                                 intNumbersSum += intNumbersArray[i];
                             }
                         }
+
+                        Console.WriteLine("La somma degli elementi in posizione dispari è: " + intNumbersSum);
+
                         Console.WriteLine("");
                         break;
                     case "9":
@@ -227,25 +233,27 @@ namespace csharp_typesystem_snacks
                             userNumbersArrayIndex++;
                             Console.WriteLine("La somma attuale è: " + userNumbersSum);
                         }
+
                         Console.WriteLine("");
                         break;
                     case "10":
 
                         //Snack 10: Fai inserire un numero, che chiameremo N, all’utente.Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.Ogni volta che ne crei uno, stampalo a schermo.
 
-                        Console.WriteLine("Digita un numero");
+                        Console.WriteLine("Digita un numero per decidere quanti array generare");
                         int N = int.Parse(Console.ReadLine());
 
                         for (int i = 0; i <= N; i++)
                         {
-                            int[] randomNumbersArray = new int[N];
+                            int[] randomNumbersArray = new int[10];
+
                             for (int j = 0; j < 10; j++)
                             {
                                 randomNumbersArray[j] = new Random().Next(1, 101);
                             }
 
                             Console.Write($"{N}° Array: [");
-                            for (int k = 0; k < randomNumbersArray.Length; k++)
+                            for (int k = 0; k < 10; k++)
                             {
                                 Console.Write($" {randomNumbersArray[k]} ");
                             }
