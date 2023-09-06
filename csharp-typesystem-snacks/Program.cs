@@ -135,7 +135,7 @@ namespace csharp_typesystem_snacks
                         int invitedGuestsIndex = 0;
                         bool guestNameFound = false;
 
-                        while (!guestNameFound && (invitedGuestsIndex == (invitedGuests.Length - 1)))
+                        while (!guestNameFound && (invitedGuestsIndex < invitedGuests.Length))
                         {
 
                             if (guestName == invitedGuests[invitedGuestsIndex])
