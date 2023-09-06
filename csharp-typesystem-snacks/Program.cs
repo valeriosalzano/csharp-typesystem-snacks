@@ -97,17 +97,20 @@ namespace csharp_typesystem_snacks
                         float numbersMean = (float)numbersSum / (float)numbersCounter;
 
                         Console.WriteLine($"La somma dei numeri da 2 a 10 vale {numbersSum}, la media vale {numbersMean}");
+
                         Console.WriteLine("");
                         break;
                     case "5":
 
                         //Snack 5: Il software chiede all’utente di inserire un numero.Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
-
                         int userNumber;
+
+                        Console.WriteLine("Digita un numero");
 
                         userNumber = int.Parse(Console.ReadLine());
 
                         Console.WriteLine(userNumber % 2 == 0 ? userNumber : (userNumber + 1));
+
                         Console.WriteLine("");
                         break;
                     case "6":
@@ -132,8 +135,9 @@ namespace csharp_typesystem_snacks
                         int invitedGuestsIndex = 0;
                         bool guestNameFound = false;
 
-                        while (guestNameFound || (invitedGuestsIndex == invitedGuests.Length - 1))
+                        while (!guestNameFound || (invitedGuestsIndex == invitedGuests.Length - 1))
                         {
+
                             if (guestName == invitedGuests[invitedGuestsIndex])
                             {
                                 Console.WriteLine("Trovato!");
